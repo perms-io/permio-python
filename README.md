@@ -4,6 +4,10 @@
 [![PyPI downloads](https://img.shields.io/pypi/dw/permio)](https://pypi.org/project/permio/)
 [![license](https://img.shields.io/pypi/l/permio)](LICENSE)
 
+**[Permio](https://perms.io) is hosted authorization for your app: RBAC and fine-grained permission checks on hierarchical resources, for multi-tenant SaaS.**
+
+[Website](https://perms.io) · [Python SDK docs](https://docs.perms.io/sdk/python/) · [Quickstart](https://docs.perms.io/quickstart/) · [Dashboard](https://app.perms.io)
+
 Python SDK for [perms.io](https://perms.io): RBAC and fine-grained
 authorization as a service, with permissions checked on hierarchical resource
 URIs.
@@ -23,7 +27,7 @@ pip install permio
 
 ## Quick start
 
-Create an API key in the [dashboard](https://perms.io) (keys look like `perms_`
+Create an API key in the [dashboard](https://app.perms.io) (keys look like `perms_`
 followed by 38 letters and digits), create a permission such as `docs.read`,
 and grant it to a principal such as `alice` on `/docs/42` (or from code with
 `permio.grant()`). Principal IDs are your own identifiers: user IDs, service
@@ -54,6 +58,8 @@ it can be created at module level and used from `asyncio.run(main())`. A
 channel belongs to one event loop: to use the same client from a later loop
 (another `asyncio.run()`), `await close()` it (or leave an `async with` block)
 first; otherwise the call raises `PermioConfigError`.
+
+**Next:** the [Python SDK guide](https://docs.perms.io/sdk/python/) covers configuration, filtering lists by access, groups and errors in depth, and [how Permio works](https://docs.perms.io/how-it-works/) explains resources, roles and inheritance.
 
 ## Configuration
 
